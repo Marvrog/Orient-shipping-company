@@ -34,3 +34,16 @@ CREATE TABLE PackageTrack(
     track_date datetime,
     primary key(package_trackID)
 );
+
+-- Vault
+CREATE TABLE Vault(
+    vaultID int not null auto_increment,
+    owner varchar(100) not null,
+    vaultNo varchar(20) not null,
+    category varchar(20) not null,
+    item varchar(30) not null,
+    quantity int not null,
+    weight int not null,
+    deposite_date date not null,
+    primary key(vaultID)
+);
