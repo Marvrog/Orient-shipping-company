@@ -15,5 +15,13 @@ CREATE TABLE Users(
 CREATE TABLE Package(
     id int not null auto_increment,
     waybill_id int not null,
-    primary key(id)
+    sender varchar(255) not null,
+    receiver varchar(255) not null,
+    origin varchar(50) not null,
+    destination varchar(50) not null,
+    estimated_delivery date not null,
+    weight int not null,
+    package_trackID int not null,
+    primary key(id),
+    foreign key(package_trackID) references PackageTrack(package_trackID)
 );
